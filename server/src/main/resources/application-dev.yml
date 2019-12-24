@@ -5,4 +5,3 @@ spring:
     username: app
     password: app
     url: jdbc:postgresql://localhost:5432/cuisine
-

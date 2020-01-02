@@ -1,5 +1,6 @@
 import { AuthenticationService } from 'app/core/authentication/authentication.service';
 import { Component, OnInit } from '@angular/core';
+import { ConstantsService } from 'app/shared/services/constant-service/constant.service';
 
 @Component({
   selector: 'app-home',
@@ -7,5 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  constructor(public authService: AuthenticationService) {}
+  name: string;
+
+  constructor(public authService: AuthenticationService) {
+    this.name = authService.getUsername();
+  }
 }

@@ -34,7 +34,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         };
     }
 
-
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.inMemoryAuthentication()
@@ -68,6 +67,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/recipe").authenticated()
                 .antMatchers("/recipe/list").authenticated()
                 .antMatchers("/error").permitAll()
+                .antMatchers("/constants").permitAll()
                 .anyRequest().denyAll();
     }
 }

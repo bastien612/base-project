@@ -4,10 +4,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { NgModule } from '@angular/core';
 import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
-  declarations: [HeaderComponent, BypassSecurityPipe],
+  declarations: [HeaderComponent, BypassSecurityPipe, FooterComponent],
   imports: [MatToolbarModule, MatButtonModule, RouterModule],
-  exports: [HeaderComponent, BypassSecurityPipe]
+  exports: [HeaderComponent, BypassSecurityPipe, FooterComponent]
 })
 export class SharedModule {}
